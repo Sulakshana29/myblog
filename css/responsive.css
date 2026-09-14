@@ -135,6 +135,12 @@
     font-size: var(--fs-xs);
   }
 
+  /* Experience */
+  .split-timeline-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
   /* Contact */
   .contact-grid {
     grid-template-columns: 1fr;
