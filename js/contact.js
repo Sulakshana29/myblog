@@ -51,40 +51,21 @@ function validateForm() {
   return isValid;
 }
 
+const CONTACT_EMAIL = 'sula2001karunarathne@gmail.com';
+
+// No backend yet: hand the message to the visitor's email client so nothing is silently lost.
+// To send directly instead, POST the fields to a form service (Formspree / Web3Forms) here.
 function submitForm() {
-  const submitBtn = document.getElementById('contact-submit');
-  const originalContent = submitBtn.innerHTML;
+  const name = document.getElementById('contact-name').value.trim();
+  const email = document.getElementById('contact-email').value.trim();
+  const message = document.getElementById('contact-message').value.trim();
 
-  // Animate button
-  submitBtn.innerHTML = `
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation: spin 1s linear infinite"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg>
-    Sending...
-  `;
-  submitBtn.disabled = true;
+  const subject = `Portfolio contact from ${name}`;
+  const body = `${message}\n\n— ${name} (${email})`;
 
-  // Add spin animation
-  const style = document.createElement('style');
-  style.textContent = '@keyframes spin { to { transform: rotate(360deg); } }';
-  document.head.appendChild(style);
+  window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-  // Simulate sending (replace with real API call)
-  setTimeout(() => {
-    submitBtn.innerHTML = `
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-      Message Sent!
-    `;
-
-    showToast('Message sent successfully! I\'ll get back to you soon.', 'success');
-
-    // Reset form
-    document.getElementById('contact-form').reset();
-
-    // Reset button after delay
-    setTimeout(() => {
-      submitBtn.innerHTML = originalContent;
-      submitBtn.disabled = false;
-    }, 3000);
-  }, 1500);
+  showToast(`Opening your email app… If nothing opens, email me at ${CONTACT_EMAIL}`, 'success');
 }
 
 function showToast(message, type = 'success') {

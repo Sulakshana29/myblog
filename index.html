@@ -3,13 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sulakshana Karunarathne — Cloud DevOps & Security Enthusiast</title>
-  <meta name="description" content="Portfolio of Sulakshana Karunarathne — Cloud DevOps and Cybersecurity enthusiast specializing in AWS, Docker, CI/CD, and application security." />
+  <title>Sulakshana Karunarathne — DevOps Engineer | AWS, Terraform, Kubernetes & Security</title>
+  <meta name="description" content="Portfolio of Sulakshana Karunarathne — DevOps engineer with an information security background. AWS, Terraform, Docker, Kubernetes, CI/CD and pipeline security." />
   <meta name="author" content="Sulakshana Karunarathne" />
-  <meta property="og:title" content="Sulakshana Karunarathne — Cloud DevOps & Security Enthusiast" />
-  <meta property="og:description" content="Portfolio showcasing infrastructure automation, security engineering, and cloud-native projects." />
+  <meta property="og:title" content="Sulakshana Karunarathne — DevOps Engineer" />
+  <meta property="og:description" content="Cloud infrastructure, CI/CD and security engineering projects: AWS, Terraform, Docker, Kubernetes, Wazuh." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://myblog-sula5.vercel.app/" />
+  <meta property="og:image" content="https://myblog-sula5.vercel.app/assets/images/og-cover.png" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://myblog-sula5.vercel.app/assets/images/og-cover.png" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
 
   <!-- Stylesheets -->
@@ -35,14 +38,15 @@
         <a href="#experience" data-section="experience">Experience</a>
         <a href="#skills" data-section="skills">Skills</a>
         <a href="#projects" data-section="projects">Projects</a>
+        <a href="#writeups" data-section="writeups">Write-ups</a>
         <a href="#contact" data-section="contact" class="nav-cta">Contact</a>
       </div>
 
-      <div class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation menu">
+      <button type="button" class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </button>
     </div>
     <div class="nav-overlay" id="nav-overlay"></div>
   </nav>
@@ -77,9 +81,9 @@
         <span id="typing-text"></span><span class="typing-cursor"></span>
       </div>
       <p class="hero-description">
-        I am a Cloud DevOps and Cybersecurity enthusiast passionate about building resilient infrastructure, 
-        automating deployments, and securing applications from the ground up. I love exploring the intersection 
-        of development, operations, and security.
+        DevOps engineer with an information security background. I build cloud infrastructure with
+        Terraform and AWS, ship it through CI/CD pipelines, and bake security into every stage, from
+        IAM policy to container image.
       </p>
       <div class="hero-actions">
         <a href="#projects" class="btn btn-primary" id="hero-cta-projects">
@@ -119,7 +123,7 @@
       <div class="section-heading reveal">
         <span class="label">About Me</span>
         <h2>Who I Am</h2>
-        <p>A driven engineer with a passion for automation, security, and scalable cloud solutions.</p>
+        <p>DevOps engineer who builds, ships, and secures cloud infrastructure.</p>
       </div>
 
       <div class="about-grid">
@@ -132,30 +136,28 @@
         <div class="about-text reveal-right">
           <h3>Sulakshana <span class="gradient-text">Karunarathne</span></h3>
           <p>
-            I'm a Cloud DevOps and Cybersecurity enthusiast based in Sri Lanka. 
-            I am deeply passionate about building automated, secure, and highly available infrastructure 
-            using modern cloud-native technologies. My hands-on projects span from designing CI/CD 
-            pipelines and Docker deployments to setting up threat detection labs and 
-            vulnerability scanners.
+            I'm a Computer Science graduate from the University of Colombo School of Computing, based in
+            Colombo, Sri Lanka. I spent six months in the Information Security Division at Bank of Ceylon
+            testing web and mobile apps before release, and that shapes how I build infrastructure:
+            security is part of the pipeline, not a step after it.
           </p>
           <p>
-            I believe in infrastructure as code, security by design, and continuous 
-            improvement. Whether it's provisioning AWS resources with Terraform, 
-            orchestrating containers with Kubernetes, or hunting vulnerabilities 
-            with Burp Suite — I love turning complex problems into elegant, automated solutions.
+            My projects cover the whole delivery path: Terraform-provisioned AWS environments, GitHub Actions
+            pipelines with Trivy scanning, Prometheus/Grafana/Loki observability, Kubernetes manifests, and
+            a Policy-as-Code gate that blocks over-permissive IAM before it ships.
           </p>
           <div class="about-stats">
             <div class="about-stat reveal">
-              <div class="about-stat-number">5+</div>
+              <div class="about-stat-number">7+</div>
               <div class="about-stat-label">Projects</div>
             </div>
             <div class="about-stat reveal">
-              <div class="about-stat-number">15+</div>
-              <div class="about-stat-label">Technologies</div>
+              <div class="about-stat-number">6 mo</div>
+              <div class="about-stat-label">InfoSec @ BOC</div>
             </div>
             <div class="about-stat reveal">
-              <div class="about-stat-number">∞</div>
-              <div class="about-stat-label">Curiosity</div>
+              <div class="about-stat-number">100%</div>
+              <div class="about-stat-label">IaC, no console clicks</div>
             </div>
           </div>
         </div>
@@ -184,15 +186,13 @@
               <div class="timeline-dot"></div>
               <div class="timeline-content glass-card">
                 <div class="timeline-header">
-                  <h3>Freelance Full Stack Developer</h3>
-                  <span class="timeline-date">Self-Employed / Freelance</span>
+                  <h3>Freelance Web Developer</h3>
+                  <span class="timeline-date">Jul 2026 – Present</span>
                 </div>
-                <p class="timeline-desc">
-                  Designing and developing end-to-end web applications for clients, managing the full project lifecycle from requirements gathering to deployment.
-                </p>
+                <p class="timeline-org">Self-employed</p>
                 <ul class="timeline-tasks">
-                  <li><strong>Ninnadaya'26 Portal:</strong> Built and deployed the official Media Competition portal (<a href="https://ninnadaya-26.vercel.app/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-teal); text-decoration: underline;">Live Site</a>).</li>
-                  <li><strong>Full Stack Development:</strong> Delivering responsive, highly interactive, and scalable solutions using modern web technologies.</li>
+                  <li><strong>Ninnadaya'26 Portal:</strong> Build, deploy and support the live media competition portal on Next.js, Supabase and Vercel, handling releases, bug fixes and user access (<a href="https://ninnadaya-26.vercel.app/" target="_blank" rel="noopener noreferrer" class="inline-link">live site</a>).</li>
+                  <li><strong>Release management:</strong> Git-based deployments, environment variables and production configuration across development and production environments.</li>
                 </ul>
               </div>
             </div>
@@ -201,15 +201,13 @@
               <div class="timeline-dot"></div>
               <div class="timeline-content glass-card">
                 <div class="timeline-header">
-                  <h3>Information Security Intern</h3>
-                  <span class="timeline-date">Bank of Ceylon</span>
+                  <h3>Information Security Analyst Intern</h3>
+                  <span class="timeline-date">Dec 2025 – Jun 2026</span>
                 </div>
-                <p class="timeline-desc">
-                  Conducted comprehensive security assessments for web and mobile applications, as well as infrastructure vulnerability scanning.
-                </p>
+                <p class="timeline-org">Bank of Ceylon · Information Security Division</p>
                 <ul class="timeline-tasks">
-                  <li><strong>AppSec & Mobile AppSec:</strong> Performed penetration testing and security assessments using <strong>Burp Suite</strong>, <strong>JADX</strong>, and <strong>MobSF</strong>.</li>
-                  <li><strong>InfraSec:</strong> Executed infrastructure vulnerability scans and security posture assessments using <strong>Tenable Nessus</strong>.</li>
+                  <li><strong>Web & Mobile AppSec:</strong> Security assessments of web and mobile applications, including dynamic testing in UAT environments ahead of releases (<strong>Burp Suite</strong>, <strong>MobSF</strong>, <strong>JADX</strong>).</li>
+                  <li><strong>Vulnerability Management:</strong> Ran vulnerability assessments with <strong>Nessus</strong> and worked with development teams on root causes and fixes.</li>
                 </ul>
               </div>
             </div>
@@ -224,12 +222,24 @@
               <div class="timeline-dot"></div>
               <div class="timeline-content glass-card">
                 <div class="timeline-header">
-                  <h3>BSc Computer Science</h3>
-                  <span class="timeline-date">University of Colombo School of Computing</span>
+                  <h3>B.Sc. in Computer Science</h3>
+                  <span class="timeline-date">2023 – 2026</span>
                 </div>
-                <p class="timeline-desc">
-                  Building a strong foundation in software engineering, infrastructure, and cybersecurity principles.
-                </p>
+                <p class="timeline-org">University of Colombo School of Computing (UCSC)</p>
+              </div>
+            </div>
+
+            <div class="timeline-item reveal">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content glass-card">
+                <div class="timeline-header">
+                  <h3>Activities</h3>
+                  <span class="timeline-date">2024 – 2025</span>
+                </div>
+                <ul class="timeline-tasks">
+                  <li><strong>Rowing:</strong> National Silver and Indoor Rowing Bronze (2025); Inter-University champions (2024).</li>
+                  <li><strong>AIESEC:</strong> Information & Digital Experience Specialist; iGV Manager (2024).</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -251,107 +261,68 @@
       </div>
 
       <div class="skills-grid stagger-children" id="skills-grid">
-        <!-- Cloud Platforms -->
         <div class="glass-card skill-category reveal">
           <div class="skill-category-header">
             <div class="skill-category-icon">☁️</div>
-            <h4 class="skill-category-title">Cloud Platforms</h4>
+            <h4 class="skill-category-title">Cloud (AWS)</h4>
           </div>
-          <div class="skill-item">
-            <div class="skill-info"><span class="skill-name">AWS (EC2, VPC, Lambda, S3)</span><span class="skill-level">90%</span></div>
-            <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
+          <div class="skill-tags">
+            <span class="tag">EC2</span><span class="tag">VPC</span><span class="tag">IAM</span><span class="tag">S3</span><span class="tag">CloudWatch</span><span class="tag">Lambda</span><span class="tag">Athena</span><span class="tag">Glue</span>
           </div>
-          <div class="skill-item">
-            <div class="skill-info"><span class="skill-name">Azure</span><span class="skill-level">60%</span></div>
-            <div class="skill-bar"><div class="skill-bar-fill" data-width="60"></div></div>
-          </div>
+          <p class="skill-used-in">Used in <button type="button" data-open-project="2">Cloud SIEM Honeypot</button>, <button type="button" data-open-project="1">Deal Aggregator</button>, <button type="button" data-open-project="4">Taskflow</button></p>
         </div>
 
-        <!-- Containers & Orchestration -->
-        <div class="glass-card skill-category reveal">
-          <div class="skill-category-header">
-            <div class="skill-category-icon">🐳</div>
-            <h4 class="skill-category-title">Containers & Orchestration</h4>
-          </div>
-          <div class="skill-item">
-            <div class="skill-info"><span class="skill-name">Docker & Docker Compose</span><span class="skill-level">92%</span></div>
-            <div class="skill-bar"><div class="skill-bar-fill" data-width="92"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-info"><span class="skill-name">Kubernetes / Helm</span><span class="skill-level">75%</span></div>
-            <div class="skill-bar"><div class="skill-bar-fill" data-width="75"></div></div>
-          </div>
-        </div>
-
-        <!-- CI/CD -->
         <div class="glass-card skill-category reveal">
           <div class="skill-category-header">
             <div class="skill-category-icon">🔄</div>
-            <h4 class="skill-category-title">CI/CD Pipelines</h4>
+            <h4 class="skill-category-title">IaC, CI/CD & Containers</h4>
           </div>
-          <div class="skill-item">
-            <div class="skill-info"><span class="skill-name">GitHub Actions</span><span class="skill-level">88%</span></div>
-            <div class="skill-bar"><div class="skill-bar-fill" data-width="88"></div></div>
+          <div class="skill-tags">
+            <span class="tag">Terraform</span><span class="tag">GitHub Actions</span><span class="tag">Docker</span><span class="tag">Docker Compose</span><span class="tag">Kubernetes</span><span class="tag">Kustomize</span><span class="tag">Minikube</span><span class="tag">Git</span>
           </div>
-          <div class="skill-item">
-            <div class="skill-info"><span class="skill-name">Jenkins</span><span class="skill-level">65%</span></div>
-            <div class="skill-bar"><div class="skill-bar-fill" data-width="65"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-info"><span class="skill-name">ArgoCD / GitOps</span><span class="skill-level">70%</span></div>
-            <div class="skill-bar"><div class="skill-bar-fill" data-width="70"></div></div>
-          </div>
+          <p class="skill-used-in">Used in <button type="button" data-open-project="1">Deal Aggregator</button>, <button type="button" data-open-project="4">Taskflow</button>, <button type="button" data-open-project="6">Cloud Policy Guard</button></p>
         </div>
 
-        <!-- IaC & Config Management -->
-        <div class="glass-card skill-category reveal">
-          <div class="skill-category-header">
-            <div class="skill-category-icon">📋</div>
-            <h4 class="skill-category-title">IaC & Config Management</h4>
-          </div>
-          <div class="skill-item">
-            <div class="skill-info"><span class="skill-name">Terraform</span><span class="skill-level">85%</span></div>
-            <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-info"><span class="skill-name">Ansible</span><span class="skill-level">65%</span></div>
-            <div class="skill-bar"><div class="skill-bar-fill" data-width="65"></div></div>
-          </div>
-        </div>
-
-        <!-- Monitoring & Observability -->
         <div class="glass-card skill-category reveal">
           <div class="skill-category-header">
             <div class="skill-category-icon">📊</div>
-            <h4 class="skill-category-title">Monitoring & Observability</h4>
+            <h4 class="skill-category-title">Monitoring & Logging</h4>
           </div>
-          <div class="skill-item">
-            <div class="skill-info"><span class="skill-name">Prometheus & Grafana</span><span class="skill-level">82%</span></div>
-            <div class="skill-bar"><div class="skill-bar-fill" data-width="82"></div></div>
+          <div class="skill-tags">
+            <span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">Loki</span><span class="tag">Promtail</span><span class="tag">cAdvisor</span><span class="tag">CloudWatch</span><span class="tag">Wazuh</span>
           </div>
-          <div class="skill-item">
-            <div class="skill-info"><span class="skill-name">ELK Stack / Loki</span><span class="skill-level">70%</span></div>
-            <div class="skill-bar"><div class="skill-bar-fill" data-width="70"></div></div>
-          </div>
+          <p class="skill-used-in">Used in <button type="button" data-open-project="1">Deal Aggregator</button>, <button type="button" data-open-project="2">Cloud SIEM Honeypot</button></p>
         </div>
 
-        <!-- Security -->
+        <div class="glass-card skill-category reveal">
+          <div class="skill-category-header">
+            <div class="skill-category-icon">🛡️</div>
+            <h4 class="skill-category-title">Pipeline Security</h4>
+          </div>
+          <div class="skill-tags">
+            <span class="tag">Trivy</span><span class="tag">Semgrep</span><span class="tag">Bandit</span><span class="tag">Policy-as-Code</span><span class="tag">IAM least privilege</span><span class="tag">Container hardening</span>
+          </div>
+          <p class="skill-used-in">Used in <button type="button" data-open-project="6">Cloud Policy Guard</button>, <button type="button" data-open-project="1">Deal Aggregator</button>, <button type="button" data-open-project="4">Taskflow</button></p>
+        </div>
+
         <div class="glass-card skill-category reveal">
           <div class="skill-category-header">
             <div class="skill-category-icon">🔒</div>
-            <h4 class="skill-category-title">Security & Pentesting</h4>
+            <h4 class="skill-category-title">Application Security</h4>
           </div>
-          <div class="skill-item">
-            <div class="skill-info"><span class="skill-name">Burp Suite</span><span class="skill-level">80%</span></div>
-            <div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div>
+          <div class="skill-tags">
+            <span class="tag">Burp Suite</span><span class="tag">MobSF</span><span class="tag">JADX</span><span class="tag">Nessus</span><span class="tag">OWASP Top 10</span><span class="tag">OWASP LLM Top 10</span>
           </div>
-          <div class="skill-item">
-            <div class="skill-info"><span class="skill-name">Trivy / Container Security</span><span class="skill-level">75%</span></div>
-            <div class="skill-bar"><div class="skill-bar-fill" data-width="75"></div></div>
+          <p class="skill-used-in">Used at Bank of Ceylon and in <button type="button" data-open-project="5">PortSwigger Labs</button>, <button type="button" data-open-project="3">CyberX</button>, <button type="button" data-open-project="7">AI-Sec</button></p>
+        </div>
+
+        <div class="glass-card skill-category reveal">
+          <div class="skill-category-header">
+            <div class="skill-category-icon">🐧</div>
+            <h4 class="skill-category-title">Linux, Web & Networking</h4>
           </div>
-          <div class="skill-item">
-            <div class="skill-info"><span class="skill-name">OWASP Top 10</span><span class="skill-level">85%</span></div>
-            <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
+          <div class="skill-tags">
+            <span class="tag">Linux admin</span><span class="tag">Bash</span><span class="tag">Python</span><span class="tag">Nginx</span><span class="tag">SSL/TLS</span><span class="tag">DNS</span><span class="tag">TCP/IP</span><span class="tag">HTTP/HTTPS</span>
           </div>
         </div>
       </div>
@@ -390,6 +361,24 @@
       </div>
     </div>
   </div>
+
+
+  <!-- ═══════════════════════════════════════════════
+       WRITE-UPS
+  ═══════════════════════════════════════════════ -->
+  <section class="writeups" id="writeups">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="label">Write-ups</span>
+        <h2>Notes from the Build</h2>
+        <p>What I found, what broke, and how I fixed it.</p>
+      </div>
+
+      <div class="writeups-grid" id="writeups-grid">
+        <!-- Post cards injected by JS -->
+      </div>
+    </div>
+  </section>
 
 
   <!-- ═══════════════════════════════════════════════
@@ -471,7 +460,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <p class="footer-text">
-        © 2025 <a href="#">Sulakshana Karunarathne</a>. Crafted with ☕ and code.
+        © <span id="footer-year">2026</span> <a href="#">Sulakshana Karunarathne</a>. Crafted with ☕ and code.
       </p>
       <div class="footer-links">
         <a href="https://github.com/Sulakshana29" target="_blank" rel="noopener noreferrer">GitHub</a>

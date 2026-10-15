@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" font-family="Consolas, 'JetBrains Mono', monospace">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#14162a"/>
+      <stop offset="1" stop-color="#0b0d18"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9b6cf0"/>
+      <stop offset="1" stop-color="#2fe0e0"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.45" r="0.5">
+      <stop offset="0" stop-color="#2fe0e0" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#2fe0e0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <rect width="1600" height="1000" fill="url(#glow)"/>
+
+  <!-- Client -->
+  <rect x="110" y="380" width="300" height="180" rx="20" fill="#161a2e" stroke="#2a2f4a" stroke-width="2"/>
+  <text x="260" y="460" text-anchor="middle" font-size="30" fill="#d8dcef">Client app</text>
+  <text x="260" y="505" text-anchor="middle" font-size="22" fill="#6b7194">prompt</text>
+
+  <!-- Gateway -->
+  <rect x="560" y="260" width="480" height="420" rx="26" fill="#121528" stroke="url(#accent)" stroke-width="4"/>
+  <path d="M800 310 l70 28 v58 c0 48 -30 82 -70 98 c-40 -16 -70 -50 -70 -98 v-58 z" fill="none" stroke="url(#accent)" stroke-width="5"/>
+  <text x="800" y="550" text-anchor="middle" font-size="32" font-weight="bold" fill="#d8dcef">LLM Security Gateway</text>
+  <g font-size="22" fill="#8a90b0" text-anchor="middle">
+    <text x="800" y="595">injection firewall · PII redaction</text>
+    <text x="800" y="630">secret scanning · audit log</text>
+  </g>
+
+  <!-- Provider -->
+  <rect x="1190" y="380" width="300" height="180" rx="20" fill="#161a2e" stroke="#2a2f4a" stroke-width="2"/>
+  <text x="1340" y="460" text-anchor="middle" font-size="30" fill="#d8dcef">LLM provider</text>
+  <text x="1340" y="505" text-anchor="middle" font-size="22" fill="#6b7194">Gemini / OpenAI</text>
+
+  <!-- Arrows -->
+  <g stroke="#2fe0e0" stroke-width="4" fill="none">
+    <path d="M420 445 H545"/><path d="M530 433 l15 12 l-15 12"/>
+    <path d="M1050 445 H1175"/><path d="M1160 433 l15 12 l-15 12"/>
+  </g>
+  <g stroke="#9b6cf0" stroke-width="4" fill="none" stroke-dasharray="10 8">
+    <path d="M1175 500 H1050"/><path d="M545 500 H420"/>
+  </g>
+
+  <!-- Blocked example -->
+  <rect x="560" y="740" width="480" height="64" rx="10" fill="#ff6b81" fill-opacity="0.12" stroke="#ff6b81" stroke-opacity="0.5"/>
+  <text x="800" y="782" text-anchor="middle" font-size="26" font-weight="bold" fill="#ff6b81">✖ BLOCKED · prompt injection</text>
+
+  <rect x="150" y="900" width="420" height="6" rx="3" fill="url(#accent)"/>
+  <text x="600" y="912" font-size="26" fill="#8a90b0" font-family="Inter, 'Segoe UI', sans-serif">Guardrails for OWASP Top 10 for LLMs</text>
+</svg>

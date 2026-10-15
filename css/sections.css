@@ -102,8 +102,17 @@
   gap: 5px;
   width: 28px;
   height: 28px;
+  padding: 0;
+  background: none;
+  border: 0;
   cursor: pointer;
   z-index: 110;
+}
+
+.nav-hamburger:focus-visible {
+  outline: 2px solid var(--accent-teal);
+  outline-offset: 4px;
+  border-radius: 4px;
 }
 
 .nav-hamburger span {
@@ -609,33 +618,53 @@
   font-weight: var(--fw-semibold);
 }
 
-.skill-item {
+.skill-category {
   display: flex;
   flex-direction: column;
-  gap: var(--space-xs);
-  margin-bottom: var(--space-lg);
 }
 
-.skill-item:last-child {
-  margin-bottom: 0;
-}
-
-.skill-info {
+.skill-tags {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
 }
 
-.skill-name {
-  font-size: var(--fs-sm);
-  font-weight: var(--fw-medium);
-  color: var(--text-primary);
-}
-
-.skill-level {
+.skill-used-in {
+  margin-top: auto;
+  padding-top: var(--space-lg);
   font-size: var(--fs-xs);
-  font-family: var(--font-mono);
   color: var(--text-muted);
+  line-height: var(--lh-normal);
+}
+
+.skill-used-in button {
+  padding: 0;
+  font: inherit;
+  color: var(--text-secondary);
+  background: none;
+  border: 0;
+  border-bottom: 1px dashed var(--border-light);
+  cursor: pointer;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.skill-used-in button:hover,
+.skill-used-in button:focus-visible {
+  color: var(--accent-teal);
+  border-color: var(--accent-teal);
+  outline: none;
+}
+
+/* Experience extras */
+.timeline-org {
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+}
+
+.inline-link {
+  color: var(--accent-teal);
+  text-decoration: underline;
 }
 
 
@@ -888,8 +917,202 @@
   font-size: var(--fs-md);
 }
 
+.project-modal-next li::before {
+  content: '○';
+  color: var(--text-muted);
+  font-size: var(--fs-xs);
+  top: 4px;
+}
+
+.project-card:focus-visible {
+  outline: 2px solid var(--accent-teal);
+  outline-offset: 4px;
+}
+
+/* Status badge (card image corner + inline in modal) */
+.project-status {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  color: hsl(40, 95%, 70%);
+  background: hsla(230, 25%, 7%, 0.85);
+  border: 1px solid hsla(40, 95%, 60%, 0.35);
+  border-radius: var(--radius-full);
+  backdrop-filter: blur(6px);
+}
+
+.project-status::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.project-status-inline {
+  position: static;
+  margin-bottom: var(--space-lg);
+}
+
+.project-modal-section {
+  margin-bottom: var(--space-xl);
+}
+
+.project-modal-section h4 {
+  font-size: var(--fs-lg);
+  margin-bottom: var(--space-md);
+}
+
+.project-modal-section p {
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  line-height: var(--lh-relaxed);
+}
+
+/* "How it works" pipeline: numbered steps joined by arrows */
+.project-flow {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-sm);
+  counter-reset: flow;
+}
+
+.project-flow li {
+  counter-increment: flow;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--text-primary);
+  padding: 6px 12px 6px 6px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+}
+
+.project-flow li::before {
+  content: counter(flow);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--accent-gradient);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: var(--fw-bold);
+}
+
+
+/* Modal screenshots */
+.project-screenshots {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-md);
+}
+
+.project-screenshots figure {
+  margin: 0;
+}
+
+.project-screenshots img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  object-position: top left;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-fast);
+}
+
+.project-screenshots a:hover img {
+  border-color: var(--accent-teal);
+}
+
+.project-screenshots figcaption {
+  margin-top: var(--space-xs);
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+
+
+/* ── WRITE-UPS SECTION ── */
+.writeups-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl);
+}
+
+.writeup-card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-xl);
+  color: inherit;
+  text-decoration: none;
+}
+
+.writeup-card:focus-visible {
+  outline: 2px solid var(--accent-teal);
+  outline-offset: 4px;
+}
+
+.writeup-meta {
+  display: flex;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+
+.writeup-title {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-tight);
+  margin-bottom: var(--space-md);
+}
+
+.writeup-summary {
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--space-lg);
+}
+
+.writeup-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.writeup-read {
+  flex-shrink: 0;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--accent-teal);
+}
+
 
 /* ── CONTACT SECTION ── */
+.contact {
+  background: var(--bg-secondary);
+}
+
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;

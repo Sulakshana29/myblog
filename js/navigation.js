@@ -21,30 +21,22 @@ export function initNavigation() {
     lastScroll = scrollY;
   });
 
+  const setMenuOpen = (open) => {
+    hamburger.classList.toggle('active', open);
+    hamburger.setAttribute('aria-expanded', String(open));
+    navLinks.classList.toggle('open', open);
+    navOverlay.classList.toggle('show', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  };
+
   // Mobile hamburger toggle
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navLinks.classList.toggle('open');
-    navOverlay.classList.toggle('show');
-    document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
-  });
+  hamburger.addEventListener('click', () => setMenuOpen(!navLinks.classList.contains('open')));
 
-  // Close mobile menu on overlay click
-  navOverlay.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    navLinks.classList.remove('open');
-    navOverlay.classList.remove('show');
-    document.body.style.overflow = '';
-  });
-
-  // Close mobile menu on link click
-  links.forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('active');
-      navLinks.classList.remove('open');
-      navOverlay.classList.remove('show');
-      document.body.style.overflow = '';
-    });
+  // Close mobile menu on overlay click, link click, or Escape
+  navOverlay.addEventListener('click', () => setMenuOpen(false));
+  links.forEach(link => link.addEventListener('click', () => setMenuOpen(false)));
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navLinks.classList.contains('open')) setMenuOpen(false);
   });
 
   // Active section tracking

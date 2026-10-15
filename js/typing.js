@@ -7,11 +7,11 @@ export function initTyping() {
   if (!el) return;
 
   const roles = [
-    'Cloud DevOps Enthusiast',
-    'Cybersecurity Enthusiast',
-    'Infrastructure Explorer',
-    'Security Researcher',
-    'Automation Advocate',
+    'DevOps Engineer',
+    'AWS & Terraform',
+    'CI/CD & Kubernetes',
+    'DevSecOps',
+    'Application Security',
   ];
 
   let roleIndex = 0;
