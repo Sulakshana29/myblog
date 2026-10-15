@@ -5,9 +5,8 @@
    returns the latest posts as JSON for the Write-ups section.
    ============================================================ */
 
-// Your Hashnode blog address, e.g. 'sulakshana.hashnode.dev' (or a custom domain).
-// Leave empty until the blog exists; the site then shows only local posts.
-export const HASHNODE_HOST = '';
+// Your Hashnode blog address (or a custom domain). Empty = show only local posts.
+export const HASHNODE_HOST = 'devseccloud.hashnode.dev';
 const MAX_POSTS = 6;
 
 export default async function handler(req, res) {
