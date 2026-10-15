@@ -127,11 +127,6 @@
     grid-template-columns: 1fr;
   }
 
-  .writeup-footer {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
   .project-filters {
     gap: var(--space-xs);
   }

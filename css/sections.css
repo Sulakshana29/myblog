@@ -1111,6 +1111,24 @@
   outline-offset: 4px;
 }
 
+.writeup-cover {
+  width: calc(100% + 2 * var(--space-xl));
+  margin: calc(var(--space-xl) * -1) calc(var(--space-xl) * -1) var(--space-lg);
+  aspect-ratio: 40/21;
+  object-fit: cover;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.writeup-card .writeup-read {
+  margin-top: auto;
+}
+
+.writeup-fallback {
+  grid-column: 1 / -1;
+  text-align: center;
+  align-items: center;
+}
+
 .writeup-meta {
   display: flex;
   gap: var(--space-sm);
@@ -1134,13 +1152,6 @@
   margin-bottom: var(--space-lg);
 }
 
-.writeup-footer {
-  margin-top: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-md);
-}
 
 .writeups-more-wrap {
   display: flex;
