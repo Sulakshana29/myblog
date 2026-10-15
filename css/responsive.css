@@ -190,6 +190,15 @@
     font-size: var(--fs-xs);
   }
 
+  .hero-available {
+    font-size: var(--fs-xs);
+    padding: 5px 12px;
+  }
+
+  .hero-tagline {
+    font-size: var(--fs-md);
+  }
+
   .about-stats {
     grid-template-columns: 1fr;
   }

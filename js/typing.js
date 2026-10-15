@@ -7,10 +7,10 @@ export function initTyping() {
   if (!el) return;
 
   const roles = [
-    'DevOps Engineer',
     'AWS & Terraform',
-    'CI/CD & Kubernetes',
-    'DevSecOps',
+    'CI/CD with GitHub Actions',
+    'Docker & Kubernetes',
+    'Prometheus · Grafana · Wazuh',
     'Application Security',
   ];
 
